@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.EditText;
 
@@ -17,7 +18,7 @@ public class LoginActivity extends PlantillaActivity {
         EditText usuario= findViewById(R.id.usuario);
         EditText password= findViewById(R.id.contraseña);
         Button login= findViewById(R.id.login);
-        CheckedTextView recordar = findViewById(R.id.recordar);
+        CheckBox recordar = findViewById(R.id.recordar);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

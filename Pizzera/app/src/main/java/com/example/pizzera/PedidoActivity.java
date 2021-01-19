@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PedidoActivity extends AppCompatActivity {
+public class PedidoActivity extends PlantillaActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

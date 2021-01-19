@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class WebActivity extends AppCompatActivity {
+public class WebActivity extends PlantillaActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
