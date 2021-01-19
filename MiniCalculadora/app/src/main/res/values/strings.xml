@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MiniCalculadora</string>
+    <string name="btn_sumar">Sumar</string>
+    <string name="btn_restar">Restar</string>
+</resources>
