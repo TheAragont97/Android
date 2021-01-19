@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalizadaActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="320dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="424dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tamaño"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/grande"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grande" />
+
+        <RadioButton
+            android:id="@+id/mediana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mediana" />
+
+        <RadioButton
+            android:id="@+id/pequeña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pequeña" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="368dp"
+        android:layout_height="308dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredientes"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/queso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Queso" />
+
+        <RadioButton
+            android:id="@+id/tomate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomate" />
+
+        <RadioButton
+            android:id="@+id/atun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atún" />
+
+        <RadioButton
+            android:id="@+id/jamon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jamón York" />
+
+        <RadioButton
+            android:id="@+id/cebolla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cebolla" />
+
+        <RadioButton
+            android:id="@+id/pimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pimiento" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="5dp"
+        android:text="Pedir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
