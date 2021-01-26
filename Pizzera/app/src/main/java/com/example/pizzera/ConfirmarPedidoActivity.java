@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ConfirmarPedidoActivity extends PlantillaActivity {
     //Atributos Globales
@@ -20,6 +21,10 @@ public class ConfirmarPedidoActivity extends PlantillaActivity {
         setContentView(R.layout.activity_confirmar_pedido);
         Button menu= findViewById(R.id.menu);
         ConstraintLayout layout= findViewById(R.id.layoutConfirmar);
+        TextView pedidoTotal = findViewById(R.id.pedidoTotal);
+
+        SharedPreferences preferences= getSharedPreferences("pizza_elegida",Context.MODE_PRIVATE);
+        pedidoTotal.setText(preferences.getString("pizza","HA HABIDO UN ERROR"));
 
         SharedPreferences preferences1 = getSharedPreferences("colorGuardado", Context.MODE_PRIVATE);
         colors=preferences1.getString("color","#FFFFFF");

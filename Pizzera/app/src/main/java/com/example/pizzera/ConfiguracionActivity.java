@@ -28,6 +28,9 @@ public class ConfiguracionActivity extends PlantillaActivity {
         Switch fav= findViewById(R.id.fav);
         Button color= findViewById(R.id.color);
         ConstraintLayout layout = findViewById(R.id.layoutConfig);
+        SharedPreferences preferences1 = getSharedPreferences("colorGuardado", Context.MODE_PRIVATE);
+        colors=preferences1.getString("color","#FFFFFF");
+        layout.setBackgroundColor(Color.parseColor(colors));
         color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,8 +50,8 @@ public class ConfiguracionActivity extends PlantillaActivity {
             else{
                 favoritas=false;
             }
-            SharedPreferences preferences1 = getSharedPreferences("pizza_favorita", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor= preferences1.edit();
+            SharedPreferences preferences2 = getSharedPreferences("pizza_favorita", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor= preferences2.edit();
             editor.putBoolean("favoritaGuardada",favoritas);
             editor.commit();
         });
