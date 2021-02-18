@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_purple"
+    android:foreground="@android:drawable/screen_background_dark_transparent"
+    tools:context=".TallerActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="292dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="30dp"
+        android:text="Taller L'Cal"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/insertar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/matricula"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="25dp"
+        android:autoText="true"
+        android:background="@color/white"
+        android:contentDescription="matricula"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/modelo"
+        app:layout_constraintEnd_toStartOf="@+id/insertar"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="32dp"
+        android:text="Matricula"
+        app:layout_constraintBottom_toTopOf="@+id/modificar"
+        app:layout_constraintEnd_toStartOf="@+id/matricula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="34dp"
+        android:text="Modelo"
+        app:layout_constraintBottom_toTopOf="@+id/eliminar"
+        app:layout_constraintEnd_toStartOf="@+id/modelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modificar" />
+
+    <EditText
+        android:id="@+id/marca"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="7dp"
+        android:autoText="true"
+        android:background="@color/white"
+        android:contentDescription="marca"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/listaVehiculos"
+        app:layout_constraintEnd_toStartOf="@+id/eliminar"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/eliminar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaVehiculos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/modelo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="36dp"
+        android:autoText="true"
+        android:background="@color/white"
+        android:contentDescription="modelo"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/modificar"
+        app:layout_constraintEnd_toStartOf="@+id/modificar"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/modificar" />
+
+    <Button
+        android:id="@+id/eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/marca"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Modificar"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/modelo"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="16dp"
+        android:text="Marca"
+        app:layout_constraintBottom_toTopOf="@+id/listaVehiculos"
+        app:layout_constraintEnd_toStartOf="@+id/marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eliminar" />
+
+    <Button
+        android:id="@+id/insertar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:text="Insertar"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/matricula"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
